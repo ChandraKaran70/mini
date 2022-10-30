@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="navigation_bar">
+<div style="margin-right:50px">
+    <img src="/static/lg.png" height="50px" alt="logo">
+    <button><strong><a href=" {{ url_for('fertilizer_search') }}">Fertilizer</a></strong></button>
+    <button><strong><a href=" {{ url_for('crop_search') }}">Crop</a></strong></button>
+    <button><strong><a href=" {{ url_for('HomePage') }}">Home</a></strong></button>
+</div>
+</div>
+{% block heads %}
+{% endblock %}
+</body>
+</html>

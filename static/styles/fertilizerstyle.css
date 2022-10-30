@@ -1,0 +1,90 @@
+         html{
+        height:100%;
+        }
+
+        body{
+        background-image:url('/static/bgimage.jpg');
+        background-repeat:no-repeat;
+        background-position:center;
+        background-size:cover;
+        opacity:0.9;
+        }
+
+
+        div#navigation_bar{
+        position:fixed;
+        left:0px;
+        top:0px;
+        height:60px;
+        width:100%;
+        background-color:Grey;
+        }
+
+       a{
+        text-decoration:none;
+        color:white;
+        }
+
+
+        button{
+        color:green;
+        float:right;
+        height:60px;
+        width:110px;
+        font-size:24px;
+        border:none;
+        background-color:inherit;
+        }
+
+        button:hover{
+        font-size:25px;
+        background-color:ForestGreen;
+        cursor:pointer;
+        color:white;
+        transition-duration:0.5s;
+        }
+
+        h1#enter_details{
+        margin-top:100px;
+        text-align:center;
+        color:white;
+        }
+
+        #form{
+        border:1px solid black;
+        text-align:center;
+        width:25%;
+        margin-left:38%;
+        padding:20px 10px 40px 5px;
+        background-image:url('/static/tablebg.jpg');
+        }
+
+        input{
+        border:1px solid;
+        float:right;
+        margin-left:20px;
+        width:200px;
+        height:20px;
+        }
+
+        label{
+        float:left;
+        font-weight:bold;
+        }
+
+        #submit{
+        height:30px;
+        width:100%;
+        font-weight:bold;
+        font-size:15px;
+        color:white;
+        background-color:teal;
+        }
+
+        #submit:hover{
+        background-color:ForestGreen;
+        cursor:pointer;
+        }
+
+
+

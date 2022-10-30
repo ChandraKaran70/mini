@@ -1,0 +1,56 @@
+{%extends 'MenuBar.html' %}{% block heads%}
+<link rel="stylesheet" type="text/css" href="/static/styles/homepage.css">
+<div id="TitlePage">
+    <h1 id="Title">Agri Tech</h1>
+    <p id="TitleTagLine">--Let's make our first step towards success in precise agriculture</p>
+
+    <div id="ProvisionDiv">
+    <p id="ProvisionsTitle">Our provisions to users include:</p>
+    <p class="provision">1.Suggest a crop based on weather and agriculture land properties</p>
+    <p class="provision">2.Depict the lack of nutrients in one's agricultural land corresponding to a crop to be grown</p>
+    <p class="provision">3.Provide insights to increase the fertility and nutrients of the soil</p>
+    </div>
+</div>
+
+<div id="AboutDiv">
+    <div id="image1">
+    </div>
+    <div id="Introduction">
+        <h1 style="color:brown">About us:</h1>
+        <p style="font-size:25px;font-family:sans-serif;margin-bottom:0">Our's is an agro tech based organization.
+            Our aim is to combine technology with agriculture in order to promote precise agriculture.</p>
+        <br>
+        <br>
+        <p style="font-size:20px;font-family:serif;margin:0px"> We ensure farmers to get better understanding of their agriculture land.
+            We suggest them the crops to grow and fertilizer requirements </p>
+    </div>
+</div>
+
+    <h1 style="text-align:center;margin-top:100px;color:brown">Our Services</h1>
+<br><br><br>
+
+<div id="services">
+<div id="crop_image" style="float:left;margin-left:29%">
+
+    <a href="{{ url_for('crop_search') }}"><img src="/static/crpimage.jpeg" width="300px" height="250px"></a><br><br>
+    <div id="crop_div">
+    <h2 style="text-align:center">CROP</h2>
+        <p class="detail">Get to know the variety of crop that suits your agriculture land.Enter your region weather and land properties to know the right crop.</p>
+    </div>
+</div>
+    <div id="fertilizer_image">
+
+        <a href="{{ url_for('fertilizer_search') }}"><img src="/static/fertilizer.jpg" width="300px" height="250px"></a></div><br><br>
+        <div id="fertilizer_div">
+        <h2 style="text-align:center">FERTILIZER</h2>
+    <p class="detail">Understanding the lack of nutrients and required fertilizers can lead to better agriculture output.
+        Explore the nutrients and fertilizers levels in soil to know whether it suits for your crop.</p>
+            </div>
+    </div>
+</div>
+<br>
+<br>
+<div id="footer">
+<h1 id="footer_heading">Agri Tech</h1>
+</div>
+{% endblock %}

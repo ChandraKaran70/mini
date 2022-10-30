@@ -1,0 +1,32 @@
+{%extends 'MenuBar.html' %}{% block heads%}
+<link rel="stylesheet" type="text/css" href="/static/styles/cropstyle.css">
+<h1 id="enter_details">Enter the details here:</h1>
+<div id="form">
+<form action="{{url_for('crop_prediction1')}}" method="post">
+    {% if input_parameters %}
+    <label for="N" name="N">Nitrogen:</label>
+    <input type="number" id="N" name="N" min="0" max="150" value={{input_parameters[0]}}><br><br>
+    <label for="P" name="P">Phosphorous:</label>
+    <input type="number" id="P" name="P" min="0" max="150" value={{input_parameters[1]}}><br><br>
+    <label for="K" name="K">Potasssium:</label>
+    <input type="number" id="K" name="K" min="0" max="250" value={{input_parameters[2]}} ><br><br>
+   <!-- <label for="temp" name="temp">Temperature</label>
+    <input type="number" step=0.01 id="temp" name="temp"><br><br>
+    <label for="humidity" name="humidity">Humidity</label>
+    <input type="number" step="0.01" id="humidity" name="humidity"><br><br>-->
+    <label for="ph" name="ph">pH</label>
+    <input type="number" step=0.01 id="ph" name="ph" min="0" max="14" value={{input_parameters[5]}} ><br><br>
+    <label for="rainfall" name="rainfall">Rainfall</label>
+    <input type="number" step="0.01" id="rainfall" name="rainfall" min="0" max="300" value={{input_parameters[6]}}><br><br>
+    <label for="city" name="city">City</label>
+    <input type="text" id="city" name="city" placeholder="Enter city name" {% if city %} value={{city}} {% endif %}><br><br>
+    <input type="submit" value="Submit" id="submit">
+    {% endif %}
+</form>
+</div>
+<div id="result">
+    {% if suggested_crop %}
+    <h1 id="suggested_crop"> Your agriculture land is suitable for growing:<br> <i style="color:green">{{suggested_crop}}</i></h1>
+    {% endif %}
+</div>
+{% endblock %}
